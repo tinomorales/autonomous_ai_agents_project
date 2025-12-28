@@ -1,0 +1,44 @@
+═══════════════════════════════════════════════════════════════
+  КАК ЗАЛИТЬ ПРОЕКТ НА GITHUB
+═══════════════════════════════════════════════════════════════
+
+✅ Git репозиторий уже инициализирован и первый коммит сделан!
+
+📋 СЛЕДУЮЩИЕ ШАГИ:
+
+1. СОЗДАЙ РЕПОЗИТОРИЙ НА GITHUB:
+   
+   - Зайди на https://github.com
+   - Нажми "+" → "New repository"
+   - Имя: autonomous-ai-agents-system (или другое)
+   - Описание: "Система полностью автономных ИИ-агентов 24/7"
+   - Public или Private (на выбор)
+   - НЕ ставь галочки на "Initialize with README" и т.д.
+   - Нажми "Create repository"
+
+2. ЗАЛИЙ КОД:
+
+   Открой терминал в папке autonomous_ai_agents_project и выполни:
+
+   git remote add origin https://github.com/ТВОЙ_USERNAME/autonomous-ai-agents-system.git
+   git branch -M main
+   git push -u origin main
+
+   (Замени ТВОЙ_USERNAME на свой GitHub username)
+
+3. ГОТОВО! 
+
+   Проект будет доступен по адресу:
+   https://github.com/ТВОЙ_USERNAME/autonomous-ai-agents-system
+
+═══════════════════════════════════════════════════════════════
+
+💡 АЛЬТЕРНАТИВА: Если используешь SSH ключи:
+
+   git remote add origin git@github.com:ТВОЙ_USERNAME/autonomous-ai-agents-system.git
+   git push -u origin main
+
+═══════════════════════════════════════════════════════════════
+
+📖 Подробная инструкция в файле: ИНСТРУКЦИЯ_ПО_GIT.md
+
