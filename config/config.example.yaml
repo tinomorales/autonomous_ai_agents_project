@@ -1,0 +1,84 @@
+# Пример конфигурации системы автономных ИИ-агентов
+# Скопируйте этот файл в config.yaml и заполните своими значениями
+
+llm:
+  provider: "openai"  # или "anthropic"
+  api_key: "${OPENAI_API_KEY}"  # Будет браться из переменных окружения
+  model: "gpt-4"  # или "gpt-3.5-turbo", "claude-3-5-sonnet-20241022"
+  temperature: 0.7
+  max_tokens: 2000
+  cache_enabled: true
+  cache_ttl: 3600  # секунды
+
+git:
+  repository_url: "https://github.com/user/repo.git"
+  branch: "main"
+  auto_commit: true
+  auto_push: true
+  commit_message_template: "feat: {description}\n\n{changes}"
+
+file_system:
+  workspace_path: "/workspace"
+  git_repo_path: "/workspace/repo"
+  backup_enabled: true
+  backup_path: "/workspace/backups"
+
+orchestrator:
+  check_interval: 60  # секунды - как часто проверять состояние
+  max_task_attempts: 3  # максимум попыток исправления
+  task_timeout: 3600  # секунды (1 час) - таймаут задачи
+  max_concurrent_tasks: 10  # максимум параллельных задач
+
+agents:
+  ceo:
+    temperature: 0.8
+    max_tokens: 3000
+    thinking_depth: "deep"
+  cfo:
+    temperature: 0.5
+    max_tokens: 2500
+    thinking_depth: "detailed"
+  developer:
+    temperature: 0.7
+    max_tokens: 2000
+    thinking_depth: "standard"
+  qa:
+    temperature: 0.5
+    max_tokens: 2000
+    thinking_depth: "detailed"
+
+strategy:
+  vision: "Создание эффективной автономной системы ИИ-агентов"
+  goals:
+    - "Автоматизация рутинных задач"
+    - "Повышение качества решений"
+    - "Непрерывная работа 24/7"
+    - "Масштабируемость системы"
+  values:
+    - "Качество"
+    - "Эффективность"
+    - "Автономность"
+    - "Прозрачность"
+
+testing:
+  framework: "pytest"  # или "jest", "mocha"
+  auto_run: true
+  test_timeout: 300  # секунды
+
+deployment:
+  type: "ci_cd"  # или "direct", "docker"
+  ci_cd_provider: "github_actions"  # или "gitlab_ci"
+  auto_deploy: true
+
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR
+  format: "json"  # или "text"
+  file: "logs/agents.log"
+  max_size_mb: 100
+  backup_count: 7
+
+monitoring:
+  enabled: true
+  metrics_port: 9090
+  health_check_interval: 60
+
